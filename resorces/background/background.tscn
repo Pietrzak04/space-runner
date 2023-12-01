@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://63x8kepejfyf"]
+
+[ext_resource type="Material" uid="uid://ba2eyrn6dl082" path="res://resorces/background/background.tres" id="1_0g6xs"]
+[ext_resource type="Texture2D" uid="uid://spxws2a2exq1" path="res://assets/background/starBig.png" id="1_1ppfy"]
+[ext_resource type="Texture2D" uid="uid://6eefjf5iyh4r" path="res://assets/background/starSmall.png" id="2_irctm"]
+
+[node name="Background" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="StarBig" type="GPUParticles2D" parent="CenterContainer/Control"]
+amount = 40
+process_material = ExtResource("1_0g6xs")
+texture = ExtResource("1_1ppfy")
+lifetime = 1.2
+preprocess = 5.0
+
+[node name="StarSmall" type="GPUParticles2D" parent="CenterContainer/Control"]
+amount = 100
+process_material = ExtResource("1_0g6xs")
+texture = ExtResource("2_irctm")
+lifetime = 1.2
+preprocess = 5.0
+randomness = 0.6
+fixed_fps = 60

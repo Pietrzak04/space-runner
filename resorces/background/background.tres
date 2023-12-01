@@ -1,0 +1,27 @@
+[gd_resource type="ParticleProcessMaterial" load_steps=3 format=3 uid="uid://ba2eyrn6dl082"]
+
+[sub_resource type="Curve" id="Curve_ekkr5"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_awun3"]
+curve = SubResource("Curve_ekkr5")
+
+[resource]
+emission_shape = 1
+emission_sphere_radius = 2.0
+particle_flag_align_y = true
+particle_flag_disable_z = true
+spread = 180.0
+flatness = 1.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 600.0
+initial_velocity_max = 700.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_max = 2.0
+scale_curve = SubResource("CurveTexture_awun3")
+turbulence_influence_min = 0.77
+turbulence_influence_max = 0.77
+turbulence_initial_displacement_min = 100.0
+turbulence_initial_displacement_max = 100.0
